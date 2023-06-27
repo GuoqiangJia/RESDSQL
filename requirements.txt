@@ -13,3 +13,8 @@ tqdm==4.63.0
 transformers==4.28.1
 tensorboard==2.8.0
 sentencepiece==0.1.99
+deepspeed==0.9.5
+Flask
+flask-restful
+flask_cors
+flask-httpauth
