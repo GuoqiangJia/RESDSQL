@@ -1,6 +1,6 @@
 set -e
 
-device="0"
+device="0,1,2,3"
 
 if [ $1 = "base" ]
 then
