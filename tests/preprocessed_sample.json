@@ -1,6 +1,6 @@
-[
-  {
-    "question": "How many singers do we have?",
+
+  [{
+    "question": "How many singers do we have ?",
     "db_id": "concert_singer",
     "db_schema": [
       {
@@ -145,5 +145,4 @@
         "target_column_name_original": "concert_id"
       }
     ]
-  }
-]
+  }]
