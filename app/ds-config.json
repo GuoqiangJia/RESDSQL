@@ -1,0 +1,13 @@
+{
+  "dtype": "torch.float16",
+  "tensor_parallel": {
+    "tp_size": 4
+  },
+  "injection_policy": {
+    "T5Block": [
+      "SelfAttention.o",
+      "EncDecAttention.o",
+      "DenseReluDense.wo"
+    ]
+  }
+}

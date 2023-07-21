@@ -1,0 +1,184 @@
+{
+  "question": "How many singers do we have?",
+  "db_id": "concert_singer",
+  "db_schema": [
+    {
+      "table_name_original": "stadium",
+      "table_name": "stadium",
+      "column_names": [
+        "stadium id",
+        "location",
+        "name",
+        "capacity",
+        "highest",
+        "lowest",
+        "average"
+      ],
+      "column_names_original": [
+        "stadium_id",
+        "location",
+        "name",
+        "capacity",
+        "highest",
+        "lowest",
+        "average"
+      ],
+      "column_types": [
+        "number",
+        "text",
+        "text",
+        "number",
+        "number",
+        "number",
+        "number"
+      ]
+    },
+    {
+      "table_name_original": "singer",
+      "table_name": "singer",
+      "column_names": [
+        "singer id",
+        "name",
+        "country",
+        "song name",
+        "song release year",
+        "age",
+        "is male"
+      ],
+      "column_names_original": [
+        "singer_id",
+        "name",
+        "country",
+        "song_name",
+        "song_release_year",
+        "age",
+        "is_male"
+      ],
+      "column_types": [
+        "number",
+        "text",
+        "text",
+        "text",
+        "text",
+        "number",
+        "others"
+      ]
+    },
+    {
+      "table_name_original": "concert",
+      "table_name": "concert",
+      "column_names": [
+        "concert id",
+        "concert name",
+        "theme",
+        "stadium id",
+        "year"
+      ],
+      "column_names_original": [
+        "concert_id",
+        "concert_name",
+        "theme",
+        "stadium_id",
+        "year"
+      ],
+      "column_types": [
+        "number",
+        "text",
+        "text",
+        "text",
+        "text"
+      ]
+    },
+    {
+      "table_name_original": "singer_in_concert",
+      "table_name": "singer in concert",
+      "column_names": [
+        "concert id",
+        "singer id"
+      ],
+      "column_names_original": [
+        "concert_id",
+        "singer_id"
+      ],
+      "column_types": [
+        "number",
+        "text"
+      ]
+    }
+  ],
+  "pk": [
+    {
+      "table_name_original": "stadium",
+      "column_name_original": "stadium_id"
+    },
+    {
+      "table_name_original": "singer",
+      "column_name_original": "singer_id"
+    },
+    {
+      "table_name_original": "concert",
+      "column_name_original": "concert_id"
+    },
+    {
+      "table_name_original": "singer_in_concert",
+      "column_name_original": "concert_id"
+    }
+  ],
+  "fk": [
+    {
+      "source_table_name_original": "concert",
+      "source_column_name_original": "stadium_id",
+      "target_table_name_original": "stadium",
+      "target_column_name_original": "stadium_id"
+    },
+    {
+      "source_table_name_original": "singer_in_concert",
+      "source_column_name_original": "singer_id",
+      "target_table_name_original": "singer",
+      "target_column_name_original": "singer_id"
+    },
+    {
+      "source_table_name_original": "singer_in_concert",
+      "source_column_name_original": "concert_id",
+      "target_table_name_original": "concert",
+      "target_column_name_original": "concert_id"
+    }
+  ],
+  "table_pred_probs": [
+    0.02806101366877556,
+    0.9727625250816345,
+    0.014333270490169525,
+    0.016115456819534302
+  ],
+  "column_pred_probs": [
+    [
+      0.001116469968110323,
+      0.007836200296878815,
+      0.010457612574100494,
+      0.010253062471747398,
+      0.007838636636734009,
+      0.012263256125152111,
+      0.011719212867319584
+    ],
+    [
+      0.022789042443037033,
+      0.023565566167235374,
+      0.015590773895382881,
+      0.002027712529525161,
+      0.0017154915258288383,
+      0.00945223681628704,
+      0.002489013597369194
+    ],
+    [
+      0.002067572670057416,
+      0.0020056951325386763,
+      0.01036904752254486,
+      0.0012466289335861802,
+      0.01127385813742876
+    ],
+    [
+      0.0008399656508117914,
+      0.0008924825233407319
+    ]
+  ]
+}

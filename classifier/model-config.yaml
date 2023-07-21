@@ -1,0 +1,26 @@
+# TorchServe frontend parameters
+minWorkers: 1
+maxWorkers: 10
+maxBatchDelay: 100
+responseTimeout: 120
+parallelType: "tp"
+deviceType: "gpu"
+# example of user specified GPU deviceIds
+deviceIds: [0,1,2,3] # seting CUDA_VISIBLE_DEVICES
+
+torchrun:
+  nproc-per-node: 4
+
+# TorchServe Backend parameters
+deepspeed:
+  config: ds-config.json
+  checkpoint: checkpoints.json
+
+handler:
+  model_name: "classifier"
+  model_path: "/date/bruce/workspace/RESDSQL-Coding/models/text2sql_schema_item_classifier"
+  max_length: 512
+  max_new_tokens: 100
+  manual_seed: 40
+  use_contents: False
+  add_fk_info: True

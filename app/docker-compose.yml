@@ -1,0 +1,13 @@
+version: '3'
+services:
+  resdsql:
+    image: resdsql-v1:latest
+    container_name: resdsql-container
+    restart: always
+    user: "$(id -u):$(id -g)"
+    ports:
+      - "3100:8080"
+      - "3101:8081"
+    volumes:
+      - $(pwd)/model-server:/home/model-server
+      - $(pwd)/logs:/home/model-server/logs

@@ -1,0 +1,30 @@
+[
+  {
+    "db_id": "concert_singer",
+    "input_sequence": "How many singers do we have? | singer : singer.singer_id , singer.name , singer.country , singer.age , singer.song_name | stadium : stadium.location , stadium.name , stadium.capacity , stadium.highest , stadium.lowest | concert : concert.theme , concert.year , concert.concert_id , concert.concert_name , concert.stadium_id | singer_in_concert : singer_in_concert.concert_id , singer_in_concert.singer_id | concert.stadium_id = stadium.stadium_id | singer_in_concert.singer_id = singer.singer_id | singer_in_concert.concert_id = concert.concert_id",
+    "output_sequence": " | ",
+    "tc_original": [
+      "singer.singer_id",
+      "singer.name",
+      "singer.country",
+      "singer.age",
+      "singer.song_name",
+      "singer.*",
+      "stadium.location",
+      "stadium.name",
+      "stadium.capacity",
+      "stadium.highest",
+      "stadium.lowest",
+      "stadium.*",
+      "concert.theme",
+      "concert.year",
+      "concert.concert_id",
+      "concert.concert_name",
+      "concert.stadium_id",
+      "concert.*",
+      "singer_in_concert.concert_id",
+      "singer_in_concert.singer_id",
+      "singer_in_concert.*"
+    ]
+  }
+]

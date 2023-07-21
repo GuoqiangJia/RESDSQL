@@ -1,0 +1,258 @@
+[
+  {
+    "question": "How many singers do we have?",
+    "db_id": "concert_singer",
+    "sql": "",
+    "norm_sql": "",
+    "sql_skeleton": "",
+    "natsql": "",
+    "norm_natsql": "",
+    "natsql_skeleton": "",
+    "db_schema": [
+      {
+        "table_name_original": "stadium",
+        "table_name": "stadium",
+        "column_names": [
+          "stadium id",
+          "location",
+          "name",
+          "capacity",
+          "highest",
+          "lowest",
+          "average"
+        ],
+        "column_names_original": [
+          "stadium_id",
+          "location",
+          "name",
+          "capacity",
+          "highest",
+          "lowest",
+          "average"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "number",
+          "number",
+          "number",
+          "number"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "singer",
+        "table_name": "singer",
+        "column_names": [
+          "singer id",
+          "name",
+          "country",
+          "song name",
+          "song release year",
+          "age",
+          "is male"
+        ],
+        "column_names_original": [
+          "singer_id",
+          "name",
+          "country",
+          "song_name",
+          "song_release_year",
+          "age",
+          "is_male"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text",
+          "text",
+          "number",
+          "others"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "concert",
+        "table_name": "concert",
+        "column_names": [
+          "concert id",
+          "concert name",
+          "theme",
+          "stadium id",
+          "year"
+        ],
+        "column_names_original": [
+          "concert_id",
+          "concert_name",
+          "theme",
+          "stadium_id",
+          "year"
+        ],
+        "column_types": [
+          "number",
+          "text",
+          "text",
+          "text",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          [],
+          [],
+          [],
+          []
+        ]
+      },
+      {
+        "table_name_original": "singer_in_concert",
+        "table_name": "singer in concert",
+        "column_names": [
+          "concert id",
+          "singer id"
+        ],
+        "column_names_original": [
+          "concert_id",
+          "singer_id"
+        ],
+        "column_types": [
+          "number",
+          "text"
+        ],
+        "db_contents": [
+          [],
+          []
+        ]
+      }
+    ],
+    "pk": [
+      {
+        "table_name_original": "stadium",
+        "column_name_original": "stadium_id"
+      },
+      {
+        "table_name_original": "singer",
+        "column_name_original": "singer_id"
+      },
+      {
+        "table_name_original": "concert",
+        "column_name_original": "concert_id"
+      },
+      {
+        "table_name_original": "singer_in_concert",
+        "column_name_original": "concert_id"
+      }
+    ],
+    "fk": [
+      {
+        "source_table_name_original": "concert",
+        "source_column_name_original": "stadium_id",
+        "target_table_name_original": "stadium",
+        "target_column_name_original": "stadium_id"
+      },
+      {
+        "source_table_name_original": "singer_in_concert",
+        "source_column_name_original": "singer_id",
+        "target_table_name_original": "singer",
+        "target_column_name_original": "singer_id"
+      },
+      {
+        "source_table_name_original": "singer_in_concert",
+        "source_column_name_original": "concert_id",
+        "target_table_name_original": "concert",
+        "target_column_name_original": "concert_id"
+      }
+    ],
+    "table_labels": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "column_labels": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "column_pred_probs": [
+      [
+        0.0009738244116306305,
+        0.008770300075411797,
+        0.008709202520549297,
+        0.008780308067798615,
+        0.008783773519098759,
+        0.00878145731985569,
+        0.008718671277165413
+      ],
+      [
+        0.019999222829937935,
+        0.009074152447283268,
+        0.008873393759131432,
+        0.001938116387464106,
+        0.0012485577026382089,
+        0.00894715916365385,
+        0.0022181461099535227
+      ],
+      [
+        0.0010453156428411603,
+        0.0019437798764556646,
+        0.008924123831093311,
+        0.0010189363965764642,
+        0.008829301223158836
+      ],
+      [
+        0.0011050860630348325,
+        0.001231045345775783
+      ]
+    ],
+    "table_pred_probs": [
+      0.018443945795297623,
+      0.9729943871498108,
+      0.017964979633688927,
+      0.01788158528506756
+    ]
+  }
+]
